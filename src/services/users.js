@@ -4,8 +4,13 @@ const UserService = class {
   }
 
   async create(userData) {
+
     const newUser = new this.Model(userData)
-    await newUser.save()
+
+    console.log('--------------')
+    console.log(newUser)
+    console.log('--------------')
+    newUser.save()
     // delete newUser.password
     return newUser.toObject()
   }

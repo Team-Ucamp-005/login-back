@@ -6,6 +6,9 @@ const UserService = require('../services/users')
 const userService = new UserService(UserModel)
 
 router.post('/', async (req, res) => {
+  console.log('--------------')
+  console.log(req)
+  console.log('--------------')
   const body = req.body
   const user = await userService.create(body)
 
