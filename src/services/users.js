@@ -11,7 +11,7 @@ const UserService = class {
     console.log(newUser)
     console.log('--------------')
     newUser.save()
-    // delete newUser.password
+    delete newUser.password
     return newUser.toObject()
   }
 }
