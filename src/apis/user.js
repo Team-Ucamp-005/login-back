@@ -8,7 +8,8 @@ const userService = new UserService(UserModel)
 
 router.get('/me', async (req, res) => {
   const sessionUser = req.user
-
+  console.log(sessionUser)
+  console.log(req.user)
   if (!sessionUser) {
     return res.status(403).send({
       message: 'Dewee esa no es tu familia'

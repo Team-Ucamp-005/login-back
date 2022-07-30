@@ -11,9 +11,6 @@ const authMiddleware = (req, res, next) => {
     const decoded = jwt.verify(token, JWT_SECRET)
     req.user = decoded.data
     req.permissions = decoded.data.permissions
-    console.log('-------')
-    console.log(req.user)
-    console.log('-------')
     const url = req.url.replace(/\//g, ':').slice(1) // www.hola.com/hola/de/nuevo => www.hola.com:hola:de:nuevo
 
     if (req.user.permissions.indexOf(url) === -1) {

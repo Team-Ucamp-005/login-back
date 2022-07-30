@@ -1,5 +1,5 @@
-const app = require('./src/app')
 
+const app = require('./src/app')
 require('dotenv').config()
 require('./src/db/mongodb')
 
